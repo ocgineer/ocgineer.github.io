@@ -4,7 +4,7 @@
 - Report Issues > Please submit all issues on the tracker http://tracker.streamlabs.com
 - Backups > Always make backups during beta testing! Settings > Overlays > Export
 
-[game-optimized-encoder-settings](##Game optimized encoder settings)
+## Game optimized encoder settings
 
 The game optmized encoder settings is currently only available when using **software (x264)** encoding and using **Twitch** as streaming service. If you use both, you can enable the optmized encoder settings by clicking *Go Live* and in the pop-up you see to set your Game and Title, you can now also enable optimized encoder settings.
 
@@ -13,7 +13,7 @@ The game optmized encoder settings is currently only available when using **soft
 
 If you do not see the pop-up to set the game or title, make sure that **Confirm stream title and game before going live** is set found in the General Settings.
 
-[strealabs-crashes-during-startup](##Streamlabs OBS crashes during startup)
+## Streamlabs OBS crashes during startup
 
 1. Try starting Streamlabs OBS as administrator.
 2. Update your graphic card driver if needed and try again.
@@ -21,7 +21,7 @@ If you do not see the pop-up to set the game or title, make sure that **Confirm 
 4. Try disabling your **Anti-Virus Software** and/or allow Streamlabs OBS in the **firewall**.
 5. Reinstall with the latest installer from [the website](http://streamlabs.com/slobs)
 
-[slobs-randomly-crashing-during-stream](##Streamlabs OBS randomly crashes during streaming)
+## Streamlabs OBS randomly crashes during streaming
 
 1. Update your video drivers.
     - For NVIDIA: 390.77
@@ -33,7 +33,7 @@ If the above did not work or already installed
 
 If this did not work, please `Upload Cache to Developers` (found in General Settings) and with the filename, that got copied to your clipboard by doing so, add a note to the [following issue](http://tracker.streamlabs.com/view.php?id=678) on our SLOBS Tracker. Describe what video driver version you have and include your Discord handle so developers can contact you.
 
-[slobs-is-stuck-on-rainbow-logo](##Streamlabs OBS is stuck on rainbow-colored Streamlabs logo)
+## Streamlabs OBS is stuck on rainbow-colored Streamlabs logo
 
 1. Try logging out of Streamlabs OBS, restart application, and log back in.
 
@@ -55,11 +55,11 @@ To recover your scenes from before version 0.8.9
 
 If step 7-8 did not work, reimport your scenes from an exported .overlay file or start anew by clearing cache and restart (found in settings) to reimport overlays from OBS Studio. In the latter case you have to redo your settings as well.
 
-[scenes-lost-after-updating-089](##Lost my scenes after updating to 0.8.9)
+## Lost my scenes after updating to 0.8.9
 
 Do the same steps as **Streamlabs OBS is stuck on rainbow-colored Streamlabs logo**
 
-[not-capturing-desktop-audio](##Not capturing desktop audio)
+## Not capturing desktop audio
 
 The developers are currently aware of the issue for some users unable to capture desktop audio. Some audio management software, like `Nahimic 2` or motherboard audio software like `Realtek HD Audio Manager` or `Sound Blaster Recon` are known to cause issues. Try closing that kind of software, and also check Windows taskmanager if any processes with a similiar name are running to be closed.
 
@@ -67,7 +67,7 @@ You can also try first to select manually the desktop audio device (audio settin
 
 As last resort, you can temporary use an alternative program to capture audio like `VoiceMeeter Banana`. This program allows you to set it as default device, and then use a *virtual audio cable* into Streamlabs OBS to capture the desktop audio. You can find various guides on the internet (like [this one](http://www.ocgineer.com/audio.html)) or Youtube.
 
-[not-going-live-on-the-service](##Not going live on the service)
+## Not going live on the service
 
 Developers are currently aware of the issue. You can try the following;
 
@@ -80,7 +80,7 @@ Developers are currently aware of the issue. You can try the following;
 
 If this did not work, please upload your cache to the developers (found in General Settings) and with the filename, that got copied to your clipboard by doing so, create an issue on the [SLOBS Tracker](http://tracker.streamlabs.com). Describe the nature of the issue and post the filename of your cache as well.
 
-[recording-is-not-working-or-saved](##Recording is not working or saved)
+## Recording is not working or saved
 
 Developers are currently aware of the issue. You can try the following;
 
@@ -99,11 +99,11 @@ If the above does not work try the following.
 
 If this did not work, please upload your cache to the developers (found in General Settings) and with the filename, that got copied to your clipboard by doing so, create an issue on the [SLOBS Tracker](http://tracker.streamlabs.com). Describe the nature of the issue and post the filename of your cache as well.
 
-[hotkeys-not-working-other-apps](##Hotkeys set in Streamlabs OBS do not work in other applications)
+## Hotkeys set in Streamlabs OBS do not work in other applications
 
 This is a known issue, and nothing you can do about this. The hotkey system is currently being rewritten to allow modifier keys (alt, shift, control) and mouse buttons (4 and 5) as hotkey **and** allow other applications to use the same hotkeys. No ETA for when this will be available.
 
-[hotkeys-not-working-in-slobs](##Hotkeys are not working in Streamlabs OBS)
+## Hotkeys are not working in Streamlabs OBS
 
 Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys are not activated on startup.
 
@@ -111,13 +111,13 @@ Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys a
 
 `This issue is fixed in the next version`
 
-[elgato-hd60-no-audio](##My Elgato HD60 is not capturing audio)
+## My Elgato HD60 is not capturing audio
 
 1. Make sure your Video Capture Device is set to `Elgato Game Capture HD` and **not** `Game Capture HD60 S (Video) (#01)`
 
 2) If the above option doesn't work for you, try running a 3.5mm audio cable from your monitor (headphones, if available) to your line-in on your PC. Then use an `Audio Input Capture Source` in a scene you want to have the Elgato audio, and select the line-input. You might want to add a small "Render Delay" `Filter` to the Elgato Video Capture Device to resync with the audio.
 
-[high-cpu-idle](##High CPU usage in Idle)
+## High CPU usage in Idle
 
 - Make sure all drivers are up-to-date and are matching 64-bit versions of your system.
 - Almost every source you use, uses CPU to be functioning properly. The more you have the higher the total CPU usage would be.
@@ -128,15 +128,15 @@ Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys a
     2. Delete `Cache`
     3. Start Streamlabs OBS again
 
-[twitch-chat-not-loading](##Twitch Chat is not loading)
+## Twitch Chat is not loading
 
 Apparently, having another streamers channel open, in your own normal browser, while you have Streamlabs OBS open will cause your the chat window to not work properly. Only solution as of right now is to just simply not have another Twitch Chat open in your normal browser while you are using Streamlabs OBS.
 
-[discord-no-streamer-mode](##Discord does not go into 'Streamer Mode')
+## Discord does not go into 'Streamer Mode'
 
 This is something Discord has to add on their side. You can up-vote at https://feedback.discordapp.com/forums/326712-discord-dream-land/suggestions/32823340-add-streamlabs-obs-to-streamermode-app-detection to push the process along and get it in faster! In the meantime, you can manually enable Streamer Mode in your Discord Settings, or you can set it up as a hotkey to enable or disable Streamer Mode.
 
-[game-or-stream-stuttering-or-fps-drops](##Game or Stream is stuttering or having FPS drops.)
+## Game or Stream is stuttering or having FPS drops.
 
 These is most likely caused by overloading either the GPU and CPU. At all times keep and eye out for both the total CPU and GPU usage in Windows task manager (if you do not have GPU in Windows 10, update to the latest major update). Some games are known to be broken and like to use all available CPU or GPU resources and cause issues for streaming software.
 

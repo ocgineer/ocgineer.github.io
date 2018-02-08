@@ -26,7 +26,7 @@ If you do not see the pop-up to set the game or title, make sure that **Confirm 
 1. Update your video drivers.
     - For NVIDIA: 390.77
     - For AMD/ATI: 18.2.1
-  
+
 If the above did not work or already installed
 
 2. Try a clean install of the video driver.
@@ -63,9 +63,9 @@ Do the same steps as **Streamlabs OBS is stuck on rainbow-colored Streamlabs log
 
 The developers are currently aware of the issue for some users unable to capture desktop audio. Some audio management software, like `Nahimic 2` or motherboard audio software like `Realtek HD Audio Manager` or `Sound Blaster Recon` are known to cause issues. Try closing that kind of software, and also check Windows taskmanager if any processes with a similiar name are running to be closed.
 
-You can also try first to select manually the desktop audio device (audio settings), you use as default device in Windows Sound, not setting it to default. Alternatively you can set it to disabled and add in the scene you want desktop audio an `Audio Output Capture` and select the device that is set as default device in Windows Sound. 
+You can also try first to select manually the desktop audio device (audio settings), you use as default device in Windows Sound, not setting it to default. Alternatively you can set it to disabled and add in the scene you want desktop audio an `Audio Output Capture` and select the device that is set as default device in Windows Sound.
 
-As last resort, you can temporary use an alternative program to capture audio like `VoiceMeeter Banana`. This program allows you to set it as default device, and then use a *virtual audio cable* into Streamlabs OBS to capture the desktop audio. You can find various guides on the internet (like [this one](http://www.ocgineer.com/audio.html)) or Youtube. 
+As last resort, you can temporary use an alternative program to capture audio like `VoiceMeeter Banana`. This program allows you to set it as default device, and then use a *virtual audio cable* into Streamlabs OBS to capture the desktop audio. You can find various guides on the internet (like [this one](http://www.ocgineer.com/audio.html)) or Youtube.
 
 ## Not going live on the service
 
@@ -113,7 +113,7 @@ Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys a
 
 ## My Elgato HD60 is not capturing audio
 
-1. Make sure your Video Capture Device is set to `Elgato Game Capture HD` and **not** `Game Capture HD60 S (Video) (#01)` 
+1. Make sure your Video Capture Device is set to `Elgato Game Capture HD` and **not** `Game Capture HD60 S (Video) (#01)`
 
 2) If the above option doesn't work for you, try running a 3.5mm audio cable from your monitor (headphones, if available) to your line-in on your PC. Then use an `Audio Input Capture Source` in a scene you want to have the Elgato audio, and select the line-input. You might want to add a small "Render Delay" `Filter` to the Elgato Video Capture Device to resync with the audio.
 
@@ -152,3 +152,4 @@ summary;
 - Lagged Frames; Compositor overloaded, commonly high GPU usage.
 - Skipped Frames; Encoder overloaded, commonly high CPU usage on x264.
 - Dropped Frames; Network issues, try other servers or restart equipment.
+{% include anchor.html %}

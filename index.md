@@ -152,3 +152,4 @@ summary;
 - Lagged Frames; Compositor overloaded, commonly high GPU usage.
 - Skipped Frames; Encoder overloaded, commonly high CPU usage on x264.
 - Dropped Frames; Network issues, try other servers or restart equipment.
+{% include anchor.html %}

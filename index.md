@@ -6,10 +6,12 @@
 
 ## Game optimized encoder settings
 
-The game optmized encoder settings is currently only available when using **software (x264)** encoding and using **Twitch** as streaming service. If you use both, you can enable the optmized encoder settings by clicking *Go Live* and in the pop-up you see to set your Game and Title, you can now also enable optimized encoder settings.
+The game optmized encoder settings is currently only available when using **software (x264)** encoding and using **Twitch** as streaming service. If you use both, you can then enable the **use optmized encoder settings** found in the *Go Live* pop-up, where you set your Game and Title. The profile selection is only in effect when **Use optimized encoder settings** is enabled.
 
-- Medium profile; CPU usage equivalent to x264 profile **veryfast** but optimized for gameplay.
-- Low profile; CPU usage equivalent to x264 profile **ultrafast** but opttmized for gameplay.
+- **Medium profile**; CPU usage is equivalent to x264 profile **veryfast** but optimized for gameplay.
+- **Low profile**; CPU usage is equivalent to x264 profile **ultrafast** but optimized for gameplay.
+
+If you use a dedicated stream pc to encode or you have a powerful single pc that manages to go slower than veryfast, for example medium, it would not be best to use the optimized encoder settings, as no higher profile exists at this moment.
 
 If you do not see the pop-up to set the game or title, make sure that **Confirm stream title and game before going live** is set found in the General Settings.
 
@@ -26,7 +28,7 @@ If you do not see the pop-up to set the game or title, make sure that **Confirm 
 1. Update your video drivers.
     - For NVIDIA: 390.77
     - For AMD/ATI: 18.2.1
-
+  
 If the above did not work or already installed
 
 2. Try a clean install of the video driver.
@@ -35,41 +37,26 @@ If this did not work, please `Upload Cache to Developers` (found in General Sett
 
 ## Streamlabs OBS is stuck on rainbow-colored Streamlabs logo
 
-1. Try logging out of Streamlabs OBS, restart application, and log back in.
-
-If the above did not work, or recovered your scenes do the following, it will be tricky.
-
-2. Close Streamlabs OBS
-3. Navigate (or winlogo + r) in Windows to `%appdata%\slobs-client\SceneCollections`
-4. Open up `manifest.json` in a text editor.
-5. Change any `false` you see to `true` and save the file.
-6. Delete any other file in `SceneCollections` **except** `manifest.json`
-7. Start Streamlabs OBS
-
-To recover your scenes from before version 0.8.9
-
-8. Close Streamlabs OBS
-9. Navigate (or winlogo + r) in Windows to `%appdata%\slobs-client`
-10. Delete `SceneCollections`
-11. Start Streamlabs OBS again.
-
-If step 7-8 did not work, reimport your scenes from an exported .overlay file or start anew by clearing cache and restart (found in settings) to reimport overlays from OBS Studio. In the latter case you have to redo your settings as well.
-
-## Lost my scenes after updating to 0.8.9
-
-Do the same steps as **Streamlabs OBS is stuck on rainbow-colored Streamlabs logo**
+Try logging out of Streamlabs OBS, restart application, and log back in.
 
 ## Not capturing desktop audio
 
 The developers are currently aware of the issue for some users unable to capture desktop audio. Some audio management software, like `Nahimic 2` or motherboard audio software like `Realtek HD Audio Manager` or `Sound Blaster Recon` are known to cause issues. Try closing that kind of software, and also check Windows taskmanager if any processes with a similiar name are running to be closed.
 
-You can also try first to select manually the desktop audio device (audio settings), you use as default device in Windows Sound, not setting it to default. Alternatively you can set it to disabled and add in the scene you want desktop audio an `Audio Output Capture` and select the device that is set as default device in Windows Sound.
+You can also try first to select manually the desktop audio device (audio settings), you use as default device in Windows Sound, not setting it to default. Alternatively you can set it to disabled and add in the scene you want desktop audio an `Audio Output Capture` and select the device that is set as default device in Windows Sound. 
 
-As last resort, you can temporary use an alternative program to capture audio like `VoiceMeeter Banana`. This program allows you to set it as default device, and then use a *virtual audio cable* into Streamlabs OBS to capture the desktop audio. You can find various guides on the internet (like [this one](http://www.ocgineer.com/audio.html)) or Youtube.
+Perhaps you can rename the executable name of Streamlabs OBS from `Streamlabs OBS.exe` to `obs64.exe`. You can find the executable on the installed location, which by default is `c:\program files\streamlabs obs\`.
+
+As last resort, you can temporary use an alternative program to capture audio like `VoiceMeeter Banana`. This program allows you to set it as default device, and then use a *virtual audio cable* into Streamlabs OBS to capture the desktop audio. You can find various guides on the internet (like [this one](http://www.ocgineer.com/audio.html)) or Youtube. 
 
 ## Not going live on the service
 
 Developers are currently aware of the issue. You can try the following;
+
+1. Log out from SLOBS, restart the application as administrator and log back in.
+2. You can also double check your stream key if this is still correct.
+
+If this did not work either try the following;
 
 1. Go to `Stream` in settings and select a **different** service than you want to use.
 2. Restart Streamlabs OBS.
@@ -78,7 +65,10 @@ Developers are currently aware of the issue. You can try the following;
 5. Restart Streamlabs OBS once more.
 6. Try going live.
 
-If this did not work, please upload your cache to the developers (found in General Settings) and with the filename, that got copied to your clipboard by doing so, create an issue on the [SLOBS Tracker](http://tracker.streamlabs.com). Describe the nature of the issue and post the filename of your cache as well.
+
+Ultimately you can try to redo your streaming settings completely anew and see if this fixes the issue. Before doing so, export your overlays (settings > overlays > export) in case cloud recovery fails, then go to settings and clear cache and restart. Redo your streaming settings, just use **basic output mode** by settings encoder and bitrate, and try going live again.
+
+If all of this did not work, please upload your cache to the developers (found in General Settings) and with the filename, that got copied to your clipboard by doing so, create an issue on the [SLOBS Tracker](http://tracker.streamlabs.com). Describe the nature of the issue and post the filename of your cache as well.
 
 ## Recording is not working or saved
 
@@ -103,19 +93,13 @@ If this did not work, please upload your cache to the developers (found in Gener
 
 This is a known issue, and nothing you can do about this. The hotkey system is currently being rewritten to allow modifier keys (alt, shift, control) and mouse buttons (4 and 5) as hotkey **and** allow other applications to use the same hotkeys. No ETA for when this will be available.
 
-## Hotkeys are not working in Streamlabs OBS
-
-Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys are not activated on startup.
-
-1. Open up `Hotkeys` in settings and close it.
-
-`This issue is fixed in the next version`
-
 ## My Elgato HD60 is not capturing audio
 
-1. Make sure your Video Capture Device is set to `Elgato Game Capture HD` and **not** `Game Capture HD60 S (Video) (#01)`
+1. Make sure your Video Capture Device is set to `Elgato Game Capture HD` and **not** `Game Capture HD60 S (Video) (#01)`.
+2. Try running Streamlabs OBS as administrator.
+3. Try reseating the HDMI cable when Streamlabs OBS is open.
 
-2) If the above option doesn't work for you, try running a 3.5mm audio cable from your monitor (headphones, if available) to your line-in on your PC. Then use an `Audio Input Capture Source` in a scene you want to have the Elgato audio, and select the line-input. You might want to add a small "Render Delay" `Filter` to the Elgato Video Capture Device to resync with the audio.
+If the above option doesn't work for you, and you have an HDMI splitter where one goes to your monitor, try running a 3.5mm audio cable from your monitor (headphones output, if available) to your line-in on your PC. Then in Windows Sound -> Recording you go into the properties of your line-in device and select `listen to this device` under Listen. This patches the audio received from the line-in tp the default selected, aka desktop audio, device.
 
 ## High CPU usage in Idle
 
@@ -132,9 +116,19 @@ Currently there is a known issue in Streamlabs OBS version 0.8.9 where hotkeys a
 
 Apparently, having another streamers channel open, in your own normal browser, while you have Streamlabs OBS open will cause your the chat window to not work properly. Only solution as of right now is to just simply not have another Twitch Chat open in your normal browser while you are using Streamlabs OBS.
 
+Otherwise log out from Streamlabs OBS, restart the application as administrator and log back in.
+
 ## Discord does not go into 'Streamer Mode'
 
 This is something Discord has to add on their side. You can up-vote at https://feedback.discordapp.com/forums/326712-discord-dream-land/suggestions/32823340-add-streamlabs-obs-to-streamermode-app-detection to push the process along and get it in faster! In the meantime, you can manually enable Streamer Mode in your Discord Settings, or you can set it up as a hotkey to enable or disable Streamer Mode.
+
+## My Stream Labels is not showing
+
+- Change to another font and/or style.
+- Remove and read the Stream Label widget(s)
+- Add a 'The Jar' widget to the scene and restart Streamlabs OBS
+
+In case it still does not show, check with Stream Labels application if the textfiles written by that application are correct. If it does use Text (GDI) as temporary solution. If not, something is wrong, please contact Streamlabs.
 
 ## Game or Stream is stuttering or having FPS drops.
 

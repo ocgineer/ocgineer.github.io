@@ -19,25 +19,19 @@ If you do not see the pop-up to set the game or title, make sure that **Confirm 
 
 1. Try starting Streamlabs OBS as administrator.
 2. Update your graphic card driver if needed and try again.
-3. Delete `C:\Program Files\Streamlabs OBS\resources\app\node_modules\obs-studio-node\distribute\obs-plugins\frontend-tools.dll`
-4. Try disabling your **Anti-Virus Software** and/or allow Streamlabs OBS in the **firewall**.
-5. Reinstall with the latest installer from [the website](http://streamlabs.com/slobs)
+3. Reinstall with the latest installer from [the website](http://streamlabs.com/slobs) run as admin.
+4. Try disabling your **Anti-Virus Software** if you us any.
 
 ## Streamlabs OBS randomly crashes during streaming
 
 1. Update your video drivers.
-    - For NVIDIA: 390.77
-    - For AMD/ATI: 18.2.1
-  
-If the above did not work or already installed
-
 2. Try a clean install of the video driver.
 
 If this did not work, please `Upload Cache to Developers` (found in General Settings) and with the filename, that got copied to your clipboard by doing so, add a note to the [following issue](http://tracker.streamlabs.com/view.php?id=678) on our SLOBS Tracker. Describe what video driver version you have and include your Discord handle so developers can contact you.
 
 ## Streamlabs OBS is stuck on rainbow-colored Streamlabs logo
 
-Try logging out of Streamlabs OBS, restart application, and log back in.
+Log out of Streamlabs OBS, restart the application as administrator, and log back in.
 
 ## Not capturing desktop audio
 
@@ -146,4 +140,5 @@ summary;
 - Lagged Frames; Compositor overloaded, commonly high GPU usage.
 - Skipped Frames; Encoder overloaded, commonly high CPU usage on x264.
 - Dropped Frames; Network issues, try other servers or restart equipment.
+
 {% include anchor.html %}
